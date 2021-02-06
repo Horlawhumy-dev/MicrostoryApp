@@ -20,7 +20,6 @@ urlpatterns = [
     path('', include('home_app.urls')),
     path('', include('comment.urls')),
     path('', include('results_app.urls')),
-    # path('', include('microstoryApp.urls')),
     path('', include('register.urls')),
     path('admin/', admin.site.urls),
 ]
