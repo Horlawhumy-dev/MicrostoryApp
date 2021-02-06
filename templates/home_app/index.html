@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}Home Page{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    {% include 'home_app/header.html' %}
+
+    {% block content %}
+        {% include 'register/alerts.html' %}
+        <div class="wrapper">
+            <div class="welcome">
+                <h2>WELCOME TO MICROSTORY APP</h2>
+                <p>Nice having you here on our comment story section. Lets go and publish story!</p>
+            </div>
+         
+           
+            
+            <div class="comment">
+                {% if user.is_authenticated%}
+                    <h3>Go ahead and make hit the publish button!!</h3>
+                    <button class="btn-publish"><a href="{% url 'comment:microstory' %}">Publish Here</a></button>
+                {% else %}
+                <p>We required you to have an account before you can access our microstory page! Signup using above link in header.</p>
+                {% endif %}
+            </div>
+        </div>
+
+    {% endblock content %}
+
+    {% include 'home_app/footer.html' %}
+
+    <!--JAVASCRIPT Tags-->
+    <script type="module" src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

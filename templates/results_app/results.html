@@ -1,0 +1,30 @@
+{% extends 'home_app/index.html' %}
+
+{% block title %} Results Page {% endblock title%}
+
+{% include 'home_app/header.html' %}
+
+
+{% block content %}
+    {% include 'register/alerts.html' %}
+        
+        <div class="blog-post">Microstory Posts</div>
+        {% if posts %}
+            {% for post in posts %}
+                <section id="comment-section" class="mysection">
+                    <div id="post" class="mypost">
+                        <h4 id="my-names">{{ post.fullname}}</h4>
+                        <h6 id="my-names">{{ post.title}}</h6>
+                        <p id="my-comment">{{ post.story}}</p>
+                        <br> <br>
+                        <p>{{ post.date_time }}</p>
+                    </div>
+                </section>
+            {% endfor %}
+        {% else %}
+        <h4> No Availabe Microstory Posts</h4>
+        {% endif %}
+{% endblock content %}
+
+
+{% include 'home_app/footer.html' %}

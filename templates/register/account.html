@@ -1,0 +1,43 @@
+{% extends 'register/base.html' %}
+
+{% block title %}Create Account Page {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header" id="wrapper">
+            <h3>Create Account</h3>
+        </div>
+        
+        {% include 'register/alerts.html' %}
+
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            <div class="form-div">
+                <label for="user_firstname">FirstName:</label>
+                <input type="text" name="first_name" placeholder="first name..." id="user_firstname">
+            </div>
+            <div class="form-div">
+                <label for="user_lastname">LastName:</label>
+                <input type="text" name="last_name" placeholder="last name..." id="user_lastname">
+            </div>
+            <div class="form-div">
+                <label for="user_nick">Username:</label>
+                <input type="text" name="username" placeholder="username..." id="user_nick">
+            </div>
+            <div class="form-div">
+                <label for="user_email">Email:</label>
+                <input type="email" name="email" placeholder="email..." id="user_email">
+            </div>
+            <div class="form-div"> 
+                <label for="user_password1">Password:</label>
+                <input type="password" name="password1" placeholder="password..." id="user_passwor1">
+            </div>
+            <div class="form-div">
+                <label for="user_password2">Retype-Password:</label>
+                <input type="password" name="password2" placeholder="confirm your password..." id="user_password2">
+            </div>
+            <button type="submit" class="btn_submit">Sign Up</button>
+        </form>
+    </div>
+
+{% endblock %}

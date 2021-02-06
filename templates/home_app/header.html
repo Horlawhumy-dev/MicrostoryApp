@@ -1,0 +1,48 @@
+<!-- Header Tag -->
+<header>
+    <nav class="navbar nav-flex">
+        <div class="micropost-header">
+            <h2>MicroStory</h2>
+            <p><em>story for all</em></p>
+        </div>
+        <div class="flex">
+            <ul class="flex">
+               {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'home_app:index' %}">Home</a>
+                    </li>
+                     <li>
+                        <h2 style='color:white;'>Welcome, {{ user.username }}</h2>  
+                    </li>
+                    <li>
+                        <a href="{% url 'register:signout' %}">SignOut</a>
+                        {% comment %} <a href="javascript:{document.getElementById('signout').submit()}">SignOut</a>
+                        <form action="{% url 'register:signout' %}" method="POST" id="signout">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form> {% endcomment %}
+                    </li> 
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url 'home_app:index' %}">Home</a>
+                    </li>
+                     <li>
+                    <a href="{% url 'register:signup' %}">Signup</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'register:signin' %}">Signin</a>
+                    </li>
+                    {% comment %} <li>
+                        <a href="#">Contact</a>
+                    </li> {% endcomment %}
+                {% endif %}
+               
+             
+               
+            </ul>
+        </div>
+    </nav>
+</header>

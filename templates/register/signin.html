@@ -1,0 +1,27 @@
+{% extends 'register/base.html' %}
+
+{% block title %}Sign In Page{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header" id="wrapper">
+            <h3>Sign In</h3>
+        </div>
+
+        {% include 'register/alerts.html' %}
+
+        <form action="{% url 'register:signin' %}" method="POST" autocomplete="off">
+            {% csrf_token %}
+            <div class="form-div">
+                <label for="user_nick">Username:</label>
+                <input type="text" name="username" placeholder="username..." id="user_nick">
+            </div>
+            <div class="form-div"> 
+                <label for="user_password1">Password:</label>
+                <input type="password" name="password1" placeholder="password..." id="user_passwor1">
+            </div>
+            <button type="submit" class="btn_submit">Sign In</button>
+        </form>
+    </div>
+
+{% endblock %}

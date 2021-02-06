@@ -1,0 +1,11 @@
+ {% load static %}
+ <link rel="stylesheet" href="{% static 'styles/form.css'%}">
+ <div class="divmessages">
+   {% if messages %}
+        {% for message in messages %}
+            <center>
+                <p>{{ message }}</p>
+            </center>
+        {% endfor %} 
+    {% endif %}
+</div>

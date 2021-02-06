@@ -1,0 +1,33 @@
+{% extends 'home_app/index.html' %}
+
+{% block title %} Comment Page {% endblock title%}
+
+
+{% include 'home_app/header.html' %}
+
+{% block content %}
+    {% comment %} {% include 'register/alerts.html' %} {% endcomment %}
+    <!--Main Content Tags -->
+    <div class="container" id="wrapper">
+        <div class="header">
+            <h3><em>Post Some Story</em></h3>
+            <p>What's on your mind buddy?</p>
+        </div>
+        <form action="{% url 'comment:microstory' %}" id="form" method="POST" autocomplete="off">
+            {% csrf_token%}
+            <input type="text" class="input-name" id="user-name" placeholder="Your Names...." name="fullname">
+            <input type="text" class="input-title" id="user-title" placeholder="Story Title..." name="title">
+            <textarea id="user-comment" class="comment-area" placeholder="give your microstory..." name="story"></textarea>
+            <input type="submit" class="input-submit" id="submit-btn" value="Post It">
+        </form>
+    </div>
+
+    {% comment %} <div id="post-comments">
+        
+    </div> {% endcomment %}
+{% endblock content %}
+
+{% include 'home_app/footer.html' %}
+
+
+
