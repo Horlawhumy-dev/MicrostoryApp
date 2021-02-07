@@ -87,7 +87,7 @@ DATABASES = {
 
 
 db_from_env = dj_database_url.config()
-DATABASES['dafault'].update(db_from_env)
+DATABASES['postgres://postgres:12Facebook@6@localhost/microstoryapp'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
