@@ -1,0 +1,41 @@
+#header {
+    background-color: rgb(0, 183, 255);
+    height: 50px;
+}
+
+#branding h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8em;
+    color: white;
+}
+
+a:link,
+a:visited{
+    color: rgb(0, 183, 255);
+}
+.module caption{
+    background-color: rgb(0, 183, 255);
+}
+
+#content h1{
+    color: rgb(0, 183, 255);
+}
+
+#content-related {
+    background-color: rgba(0, 183, 255, 0.623);
+    color: white;
+}
+
+
+.module h2 h3 {
+    color: white;
+}
+
+.actionlist .addlink .mini{
+    color: white;
+    font-weight: bolder;
+}
+
+.actionlist .addlink a{
+    color: white;
+}

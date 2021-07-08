@@ -1,0 +1,673 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(120deg, #eee, #ccc);
+}
+.navbar{
+    background-color: rgb(0, 183, 255);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.micropost-header p{
+    font-size: .7em;
+    color: black;
+    letter-spacing: 5px;
+}
+.micropost-header{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    color: white;
+    margin-left: 1em;
+    padding: .5em 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    padding: .5em;
+}
+
+ul{
+    padding: .5em;
+}
+
+ul li{
+    list-style-type: none;
+    margin: 0 1em;
+    padding: 0 1em;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+ul li a:hover{
+    border-bottom: 1px solid white;
+} 
+.container{
+    background-color: white;
+    margin: 1.5em 2em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.753);
+    padding: 1em;
+}
+
+.container h3{
+    letter-spacing: 5px;
+}
+
+.header{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    color: rgb(0, 183, 255);
+    font-weight: lighter;
+}
+
+.header p{
+    font-size: .7em;
+    color: rgb(0, 183, 255, .7);
+    margin-top: .5em;
+}
+
+.wrapper{
+    margin-top: 2em;
+}
+
+#signout{
+    margin-top: 1rem;
+}
+.welcome {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    color: rgb(0, 183, 255);
+    font-weight: lighter;
+}
+
+
+.welcome p{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .6em;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    margin-left: 4em;
+    letter-spacing: 2px;
+}
+
+
+.results {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    color: rgb(0, 183, 255);
+    font-weight: lighter;
+}
+
+
+.results p{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8em;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    margin-left: -1em;
+}
+
+.comment{
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 2em;
+}
+
+.btn-publish{
+    background-color:rgba(0, 183, 255, 0.726);
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+    outline: none;
+}
+
+.btn-publish:hover{
+    background-color:rgba(0, 183, 255);
+    letter-spacing: 2px;
+    transition: transform 200ms ease-in-out;
+}
+.btn-publish a{
+    color:white;
+    text-decoration: none;
+}
+
+.btn-publish a:hover{
+    color: black;
+    
+}
+
+
+
+
+.btn-results{
+    background-color:rgba(0, 183, 255, 0.726);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+    margin-left: 1em;
+    padding: 1em;
+    outline: none;
+}
+
+.btn-results:hover{
+    background-color:white;
+    letter-spacing: 1.5px;
+    transition: transform 200ms ease-in-out;
+}
+.btn-results a{
+    color:black;
+    text-decoration: none;
+}
+
+.btn-results a:hover{
+    color: black;
+    
+}
+.pubstory{
+    color: rgb(0, 183, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 1em;
+}
+.story{
+    text-align: left;
+    margin-left: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    color: rgb(0, 183, 255);
+    font-weight: lighter;
+    padding: 1em 0;
+}
+
+
+.storyp{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    line-height: 2em;
+    text-align: center;
+}
+
+form{
+    padding: 1em 0;
+}
+
+.input-name{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    width: 80%;
+    margin-bottom: 2em;
+    padding: .6em;
+    outline: none;
+  
+    
+}
+
+.input-name:focus{
+    border: 1px solid red;
+}
+
+
+.input-title{
+    display: block;
+    width: 80%;
+    margin-bottom: 1em;
+    padding: .6em;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.input-title:focus{
+    border: 1px solid red;
+}
+
+.comment-area{
+    height: 100px;
+    padding: .5em;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 2em;
+}
+
+
+.comment-area:focus{
+    border: 1px solid red;
+}
+
+
+.input-submit{
+    background-color:  rgb(0, 183, 255);
+    border: none;
+    border-radius: 3px;
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    width: 80%;
+    margin-top: 1em;
+    padding: .5em;
+    outline: none;
+    letter-spacing: 5px;
+}
+
+
+/* .input-submit{
+    background-color: rgba(255, 0, 0, 0.685);
+} */
+
+.input-submit:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.cancel-btn{
+    background-color: transparent;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    color: red;
+    cursor: pointer;
+    width: 80%;
+    margin-top: .5em;
+    padding: .5em;
+    outline: none;
+}
+
+.cancel-btn:hover{
+    background-color: #ccc;
+}
+
+.alert{
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.5em 2em;
+    width: 80%;
+    padding: .3em;
+}
+
+
+.danger{
+    background-color: transparent;
+    color: rgba(255, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.5em 2em;
+    width: 80%;
+    padding: .3em;
+}
+
+
+.success{
+    background-color: transparent;
+    color: rgba(0, 128, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.5em 2em;
+    width: 80%;
+    padding: .3em;
+}
+.mysection{
+    background-color: inherit;
+    border: none;
+    border-radius: 3px;
+    margin: 1.5em 2em;
+    padding: 1em;
+
+}
+
+.mypost{
+    border: none;
+    box-shadow: 0px 0  1.5px 1px;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    margin-bottom: .5em;
+    padding: 1rem;
+}
+
+.mypost h4{
+    color:rgb(255, 51, 0);
+    margin-bottom: 1em;
+}
+
+.mypost h6{
+    color:rgb(0, 183, 255);
+    font-size: 12px;
+    margin-bottom: 1em;
+}
+
+.blog-post{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color:rgb(0, 183, 255);
+    margin: 1.5em 8em;
+}
+
+
+.title{
+    color: rgb(0, 183, 255);
+    margin-top: .5em;
+    text-decoration: underline;
+    text-transform: capitalize;
+
+}
+
+.button-div{
+    margin-top: 1em;
+    margin-left: 0em;
+    padding: 1em 0 1em -1em;
+    width: 70%;
+    display: flex;
+}
+
+.button-div button{
+    background-color: transparent;
+    display: inline;
+    border-radius: 10px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: rgb(0, 183, 255);
+    cursor: pointer;
+    padding: 1em;
+    margin-left: 1em;
+    outline: none;
+}
+
+.button-div button:nth-child(1):hover{
+    background-color: tomato;
+    color: white;
+}
+
+
+.button-div button:nth-child(2):hover{
+    background-color: red;
+    color: white;
+}
+
+.date-div{
+    margin-top: 1em;
+    margin-left: 1em;
+    color: rgba(255, 0, 0, 0.616);
+}
+
+.date-div:hover{
+    color: rgba(255, 0, 0);
+    cursor: pointer;
+}
+.footer-post{
+    background-color: rgba(0, 0, 0, 0.753);
+    padding: 1em 0;
+    margin-top: 10em;
+}
+
+.micro-post{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 183, 255);
+    font-size: .7em;
+    padding: .5em;
+    margin-top: 9em;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+
+@media screen  and (max-width:1440px) and (min-width:1025px){
+    .container{
+        width: 60%;
+        margin-left: 3em;
+        padding-left: 5em;
+    }
+
+    input{
+        width: 40%;
+    }
+
+    .mysection{
+        width: 60%;
+        margin-left: 3em;
+        padding-left: 5em;
+    }
+
+    .comment-area{
+        width: 80%;
+    }
+
+    .cancel-btn{
+        width: 60%;
+        margin-left: 5em;
+    }
+
+    .button-div{
+        width: 100%;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    .button-div button{
+        padding: 1em;
+    }
+
+    .alert{
+        width: 60%;
+        margin-left:3em;
+        padding-left: 5em;
+       
+    }
+    .welcome p{
+        margin-left: 7em;
+    }
+}
+
+
+
+@media screen  and (max-width:1024px) and (min-width:901px){
+    .container{
+        width: 70%;
+        margin-left: 3em;
+    }
+
+    input{
+        width: 80%;
+    }
+
+    .comment-area{
+        width: 80%;
+    }
+
+    .mysection{
+        width: 70%;
+        margin-left: 3em;
+    }
+
+    .cancel-btn{
+        width: 70%;
+        margin-left: 3em;
+    }
+
+    .button-div{
+        width: 100%;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    .button-div button{
+        padding: 1em;
+    }
+
+    .alert{
+        width: 70%;
+        margin-left:3em;
+       
+    }
+/* 
+    .footer-post{
+        height: 20px;
+        /* margin-top: 4em; */
+     
+
+    /* .micro-post{
+        margin-top: 4.5em;
+    } */
+
+
+}
+
+
+
+@media screen and (max-width:900px) and (min-width:501px){
+    .container{
+        width: 70%;
+        margin-left: 1em;
+    }
+
+    input{
+        width: 80%;
+    }
+
+    .comment-area{
+        width: 80%;
+    }
+
+
+    .mysection{
+        width: 70%;
+        margin-left: 1em;
+    }
+
+    .cancel-btn{
+        width: 80%;
+    }
+
+    .button-div{
+        width: 100%;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    .button-div button{
+        padding: 1em;
+    }
+
+    .alert{
+        width: 70%;
+        margin-left: 1em;
+       
+    }
+
+    /* .footer-post{
+        height: 40px;
+        /* margin-top: 8em; */
+    
+
+    /* .micro-post{
+        margin-top: 5em;
+    } */
+
+
+}
+
+
+@media screen and (max-width:500px) and (min-width:320px){
+    .container{
+        width: 80%;
+        margin-left: 1em;
+    }
+
+    input{
+        width: 80%;
+    }
+
+    .mysection{
+        width: 80%;
+        margin-left: .5em;
+    }
+
+    .comment-area{
+        width: 80%;
+    }
+
+    .button-div{
+        width: 100%;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    .button-div button{
+        padding: .5em;
+    }
+
+    .alert{
+        width: 80%;
+        margin-left: .5em;
+       
+    }
+
+    /* .footer-post{
+        height: 50px;
+        /* margin-top: 2em; */
+/* 
+    .micro-post{
+        margin-top: 1em;
+    } */
+
+
+}
+
+/* @media screen and (max-width:319px) and (min-width:280px){
+
+    .mypost{
+        width: 100%;
+        padding: 1em;
+    }
+
+    .button-div{
+        width: 95%;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    
+    .button-div button{
+        padding: 0em;
+    }
+}
+ */

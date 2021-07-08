@@ -6,13 +6,16 @@
             <p><em>story for all</em></p>
         </div>
         <div class="flex">
-            <ul class="flex">
+            <ul class="flex results">
                {% if user.is_authenticated %}
                     <li>
                         <a href="{% url 'home_app:index' %}">Home</a>
                     </li>
                     <li>
-                        <h2 style='color:white;'>Welcome, {{ user.username }}</h2>  
+                        <a href="{% url 'comment:microstory' %}">Story</a>
+                    </li>
+                    <li>
+                        <h2 style='color:white;'>Hi, {{ user.username }}</h2>  
                     </li>
                     <li>
                         <a href="{% url 'register:signout' %}">SignOut</a>

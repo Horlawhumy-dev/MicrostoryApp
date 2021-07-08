@@ -46,19 +46,20 @@ ul{
 ul li{
     list-style-type: none;
     margin: 0 1em;
-    padding: 0 1em;
+    /* padding: 0 1em; */
 }
 
 ul li a{
     text-decoration: none;
     color: black;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bolder;
 }
 
 ul li a:hover{
-    border-bottom: 1px solid white;
+    border-bottom: 1.5px solid white;
 } 
+
 .container{
     background-color: white;
     margin: 1.5em 2em;
@@ -73,7 +74,7 @@ ul li a:hover{
 }
 
 .header{
-    text-align: left;
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.2em;
     color: rgb(0, 183, 255);
@@ -93,6 +94,7 @@ ul li a:hover{
 #signout{
     margin-top: 1rem;
 }
+
 .welcome {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -101,15 +103,17 @@ ul li a:hover{
     font-weight: lighter;
 }
 
-
+.welcome h2{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
 .welcome p{
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: .6em;
-    color: rgb(0, 0, 0);
-    font-weight: lighter;
-    margin-left: 4em;
-    letter-spacing: 2px;
+    font-size: .8em;
+    color: rgb(0, 183, 255);
+    font-weight: bold;
 }
 
 
@@ -132,17 +136,27 @@ ul li a:hover{
 }
 
 .comment{
+    margin: 3rem auto;
     text-align: center;
     padding: 2em 0;
-    margin-top: 2em;
 }
 
+.comment h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.comment h2{
+    margin-top: 1rem;
+    color: rgb(255, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .btn-publish{
     background-color:rgba(0, 183, 255, 0.726);
     border: none;
     border-radius: 1em;
     cursor: pointer;
     padding: 1em;
+    margin-top: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
     font-size: 1.5em;
@@ -356,15 +370,36 @@ form{
 }
 
 .mypost{
+    border: none;
+    box-shadow: 0px 0  1.5px 1px;
+    border-radius: 2px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
     margin-bottom: .5em;
+    padding: 1rem 2rem;
 }
 
 .mypost h4{
-    color: rgba(255, 2, 2);
+    color:rgb(255, 51, 0);
     margin-bottom: 1em;
 }
+
+.mypost h6{
+    color:rgb(0, 183, 255);
+    font-size: 12px;
+    margin-bottom: 1em;
+}
+
+.blog-post{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color:rgb(0, 183, 255);
+    margin: 2em 8em;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
 
 /* #my-comment{
     color: black;
@@ -432,13 +467,13 @@ form{
 .micro-post{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(0, 183, 255);
-    font-size: .7em;
+    font-size: 1em;
     padding: .5em;
     margin-top: 9em;
+    padding: 2rem 0;
     letter-spacing: 5px;
     text-align: center;
 }
-
 
 @media screen  and (max-width:1440px) and (min-width:1025px){
     .container{
@@ -599,16 +634,29 @@ form{
 @media screen and (max-width:500px) and (min-width:320px){
     .container{
         width: 80%;
-        margin-left: 1em;
+        margin: 2rem auto;
     }
 
     input{
         width: 80%;
     }
+    .micropost-header{
+        display: flex;
+        flex-direction: column;
+    }
+    .blog-post{
+        display: block;
+        margin: 2em 0;
+    }
+    
+
+    .micropost-header .results{
+        margin-top: 1rem;
+    } 
 
     .mysection{
         width: 80%;
-        margin-left: .5em;
+        margin: 1rem auto;
     }
 
     .comment-area{
