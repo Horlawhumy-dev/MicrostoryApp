@@ -615,7 +615,10 @@ form{
     input{
         width: 80%;
     }
-
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
     .mysection{
         width: 80%;
         margin-left: .5em;
