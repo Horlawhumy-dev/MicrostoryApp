@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(120deg, #eee, #ccc);
+}
+.navbar{
+    background-color: rgb(0, 183, 255);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.micropost-header p{
+    font-size: .7em;
+    color: black;
+    letter-spacing: 5px;
+}
+.micropost-header{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    color: white;
+    margin-left: 1em;
+    padding: .5em 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    padding: .5em;
+}
+
+ul{
+    padding: .5em;
+}
+
+ul li{
+    list-style-type: none;
+    margin: 0 1em;
+    padding: 0 1em;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+ul li a:hover{
+    border-bottom: 1px solid white;
+} 
+
+.success{
+    color: green;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.fail{
+    color: red;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.container{
+    border: none;
+    box-shadow: 0px 0px 2px 2px black;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5em auto;
+    max-width: 500px;
+    padding: 1em;
+
+}
+
+.container h3{
+    color: rgb(0, 183, 255);
+    margin: 0 8em 1em;
+}
+
+form{
+    margin: 2em;
+}
+.form-div{
+    border-bottom: 1px solid black;
+    padding-top: 2em;
+}
+
+.divmessages center p{
+    color: rgb(255, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+label{
+    color: rgb(0, 183, 255);
+    font-weight: bolder;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+    color: black;
+    font-size: 1em;
+    width: 250px;
+    outline: none;
+    padding: .5em;
+    margin-left:1em;
+}
+
+.btn_submit{
+    background-color: transparent;
+    border: 2px solid orangered;
+    color: black;
+    cursor: pointer; 
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin: 3em 8em;
+    outline: none;
+    padding: 1.5em 2em;
+}
+
+.btn_submit:focus{
+    background-color: orangered;
+    color: rgba(0, 0, 0, 0.746);
+    cursor: pointer; 
+}
+
+
+.btn_submit:hover{
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.footer-post{
+    background-color: rgba(0, 0, 0, 0.753);
+    padding: 1em 0;
+    margin-top: 10em;
+}
+
+.micro-post{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 183, 255);
+    font-size: .7em;
+    padding: .5em;
+    margin-top: 9em;
+    letter-spacing: 5px;
+    text-align: center;
+}
