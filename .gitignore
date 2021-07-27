@@ -1,4 +1,2 @@
 ./static_root
-requirements.txt
 .env
-./settings
